@@ -1,7 +1,7 @@
 Getting and Cleaning Data - Course Project
 ==========================================
 
-This repository contains two scripts: [run_analysis.R](run_analysis.R) and [helper_functions.R](helper_functions.R). It also contains the original assignment in [assignment.md](assignment.md) and the Code Book ([CodeBook.md][CodeBook.md]) for the dataset obtained by the analysis.
+This repository contains two scripts: [run_analysis.R](run_analysis.R) and [helper_functions.R](helper_functions.R). It also contains the original assignment in [assignment.md](assignment.md) and the Code Book ([CodeBook.md](CodeBook.md)) for the dataset obtained by the analysis.
 
 run\_analysis.R
 --------------
