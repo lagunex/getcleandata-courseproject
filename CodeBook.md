@@ -11,7 +11,7 @@ Column names were renamed, replacing "-" for "\_" and removing the parenthesis f
 
 Originally, the Y data was given as integers. Each integer represented a given activity. We replaced the integer by the corresponding activity using the information provided in the original data source. Therefore, the possible values for the activities are: LAYING, SITTING, STANDING, WALKING, WALKING\_DOWNSTAIRS, WALKING\_UPSTAIRS. The variable name assigned to the Y data was "activity". 
 
-Finally, the merged dataset was grouped by activity and subject and for each group the mean of the different measures was obtained. The result is a tidy dataset of 35 observations and 68 variables: the first two variables define the group (activity and subject) and the remaining 66 variables represent the mean of the selected measures in the given group, e.g. tBodyAcc\_mean\_X represents the mean of the original tBodyAcc-mean()-X estimations observed for the given subject during the given activity.
+Finally, the merged dataset was grouped by activity and subject and for each group the mean of the different measures was obtained. The result is a tidy dataset of 180 observations and 68 variables: the first two variables define the group (activity and subject) and the remaining 66 variables represent the mean of the selected measures in the given group, e.g. tBodyAcc\_mean\_X represents the mean of the original tBodyAcc-mean()-X estimations observed for the given subject during the given activity.
 
 The following section is an extract from the original documentation. It describes in detail how the features were selected during the original experiment.
 
