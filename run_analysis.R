@@ -31,12 +31,16 @@ run_analysis <- function() {
     y_data <- merge_files("UCI HAR Dataset/train/y_train.txt",
                           "UCI HAR Dataset/test/y_test.txt", "factor")
     names(y_data) <- "activity_id"
+    y_data$column_id <- 1:nrow(y_data) # to remember original order
     activity_names <- read.table("UCI HAR Dataset/activity_labels.txt",
                                  col.names = c("id", "activity"))
+
+    # this operation modifies the order of the rows in y_data
     y_data <- merge(y_data, activity_names, by.x = "activity_id", by.y = "id")
 
-    # keep only the descriptive activity names (step 3)
-    y_data <- select(y_data, activity)
+    # restore the original order messed up by "merge" using column_id
+    # and keep only the descriptive activity names (step 3)
+    y_data <- y_data %>% arrange(column_id) %>% select(activity)
 
     # step 1 for subjects
     subjects <- merge_files("UCI HAR Dataset/train/subject_train.txt",
